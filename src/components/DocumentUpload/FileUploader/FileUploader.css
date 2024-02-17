@@ -1,0 +1,81 @@
+/* Styling for the heading */
+
+/* Styling for the wrapper containing the upload area and button */
+.upload-area-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 0.9rem; 
+    margin: 5px 0; 
+    border-radius: 6px; 
+    margin-top: 1rem;
+    align-items: center;
+}
+
+/* Styling for the upload area */
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ddd; 
+    border-radius: 6px; 
+    margin-bottom: 0.9rem; 
+    cursor: pointer;
+    text-align: center;
+    height: 6rem; 
+    width: 100%;
+}
+/* Styling for the upload area text */
+.upload-area span{
+    margin-top: .5rem;
+    font-size: .9rem;
+    color: var(--primaryBlue);
+}
+
+/* Styling for the file details */
+.file-details {
+    display: flex;
+    align-items: center;
+    margin: 1rem; 
+}
+
+/* Styling for the file details info */
+.file-details-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 0.5rem; 
+}
+
+/* Styling for the container of file details info */
+.file-details-info-container {
+    flex-grow: 1;
+    margin-left: 1rem; 
+}
+
+/* Styling for the span within file details info */
+.file-details-info span {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Styling for the progress bar background */
+.progress-bar-background {
+    background-color: #ddd;
+    height: 5px;
+    width: 100%; 
+}
+
+/* Styling for the progress bar fill */
+.progress-bar-fill {
+    background-color: #ff9e19;
+    height: 100%; 
+}
+
+/* Styling for the file uploader icons */
+.file-uploader-icons {
+    color: var(--accentColor); 
+    font-size: 1.5rem; 
+}

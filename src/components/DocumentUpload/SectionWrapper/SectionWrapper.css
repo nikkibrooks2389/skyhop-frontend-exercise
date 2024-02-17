@@ -1,0 +1,9 @@
+.document-upload-section-wrapper h2{
+
+    margin: 0rem 0rem 0.5rem 0rem;
+    font-family: "Raleway", sans-serif;
+    text-align: start;
+    color: var(--primaryBlue); /* Primary blue color */
+    font-weight: bold;
+    font-size: 0.9rem;
+    }

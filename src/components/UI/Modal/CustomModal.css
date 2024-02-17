@@ -1,0 +1,7 @@
+.PrimaryCloseButton {
+    background-color: var(--primaryBlue); /* Use CSS variable */
+    padding: 0px;
+    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+  }

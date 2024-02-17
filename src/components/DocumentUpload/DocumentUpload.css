@@ -1,0 +1,38 @@
+.document-upload h1 {
+    position: relative;
+    display: inline-block;
+    color: var(--primaryBlue);
+    margin-bottom: 0;
+}
+
+.document-upload-form {
+    /* This container now simply serves as a wrapper for the form */
+    padding:2rem
+}
+
+.form-content-top {
+    display: flex;
+    width: 100%;
+    flex-direction: row; /* Ensures children are laid out in a row */
+    gap: 3rem; /* Optional: Adds some space between the sections */
+  
+}
+
+.form-section-top-left {
+    flex: 60%; /* Takes up 60% of the space */
+    display: flex;
+    flex-direction: column; /* Ensures children are laid out in a column */
+   
+}
+
+.form-section-top-right {
+    flex: 40%; /* Takes up 40% of the space */
+}
+
+.form-section-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Adjusts the buttons to each end or as per design */
+    padding-top: 20px; /* Adds some space above the buttons */
+    /* Additional styles for button alignment and spacing */
+}

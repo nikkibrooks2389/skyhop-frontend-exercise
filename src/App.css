@@ -6,4 +6,7 @@
   justify-content: center;
   text-align: center;
   background-color: #B3B3B3;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }

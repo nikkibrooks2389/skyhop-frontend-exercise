@@ -4,51 +4,78 @@ import Modal from '@mui/material/Modal';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 
-const style = {
+/**
+ * Component: CustomModal
+ * Purpose: Renders a customizable modal dialog using Material-UI components. It can be reused throughout the application for consistent modal presentations.
+ * Props:
+ *   open (Boolean): Controls the visibility of the modal. If true, the modal is shown.
+ *   handleClose (Function): A function to call when the modal needs to be closed. This can be triggered by the close icon button or any custom logic within the modal's content.
+ *   children (Node): The content to be displayed inside the modal. This allows for flexible use of the modal component with any custom content.
+ *   width (String ): Specifies the width of the modal. Can be any valid CSS value (e.g., '70vw', '600px'). Default is '70vw'.
+ *   height (String ): Specifies the height of the modal. Can be any valid CSS value (e.g., '85vh', '400px'). Default is '85vh'.
+ *   customStyle (Object): Custom styles that can be applied to the modal's Box component for further customization.
+ *   backdropStyle (Object): Custom styles that can be applied to the modal's backdrop. Default is { backgroundColor: 'transparent' }.
+ *   closeButtonStyle (Object): Custom styles that can be applied to the close icon button.
+ *   showCloseButton (Boolean): Controls the visibility of the close icon button. If true, the button is shown. Default is true.
+ *   ariaLabelledby (String): Provides an accessible name for the modal, which is referenced by ID.
+ *   ariaDescribedby (String): Provides an accessible description for the modal, which is referenced by ID.
+ */
+
+const defaultStyle = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400, // Adjust based on your needs
   bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
+  borderRadius: 3,
+  boxShadow: '0 8px 10px -5px rgba(0, 0, 0, 0.2)',
   p: 4,
-  pt: 2.5, // Adjust padding top to ensure space for the close icon
+  textAlign: 'center',
 };
 
-function CustomModal({ open, handleClose, children }) {
+function CustomModal({
+  open,
+  handleClose,
+  children,
+  width = '70vw',
+  height = '85vh',
+  customStyle = {},
+  backdropStyle = { backgroundColor: 'transparent' },
+  closeButtonStyle = {},
+  showCloseButton = true,
+  ariaLabelledby = 'custom-modal-title',
+  ariaDescribedby = 'custom-modal-description',
+
+}) {
+  const style = { ...defaultStyle, height, width, ...customStyle };
+
   return (
     <Modal
       open={open}
       onClose={handleClose}
-      aria-labelledby="custom-modal-title"
-      aria-describedby="custom-modal-description"
+      aria-labelledby={ariaLabelledby}
+      aria-describedby={ariaDescribedby}
       BackdropProps={{
-        style: { backgroundColor: 'transparent' }, // Or your desired backdrop color
+        style: backdropStyle,
       }}
     >
       <Box sx={style}>
-        <IconButton
-          aria-label="close"
-          onClick={handleClose}
-          sx={{
-            position: 'absolute',
-            left: 8, // Positioned on the left side
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-            backgroundColor: 'darkblue', // Blue background for the button
-            padding: 0, // Remove padding
-            borderRadius: "10px", // Remove border radius
-            width: 36, // Width of the button (making it square)
-            height: 36, // Height of the button (making it square)
-            // '&:hover': {
-            //   backgroundColor: 'darkblue', // Darker blue on hover
-            // },
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
+        {showCloseButton && (
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              left: 25,
+              top: 25,
+              color: (theme) => theme.palette.grey[500],
+              ...closeButtonStyle
+            }}
+
+          >
+            <CloseIcon />
+          </IconButton>
+        )}
         {children}
       </Box>
     </Modal>

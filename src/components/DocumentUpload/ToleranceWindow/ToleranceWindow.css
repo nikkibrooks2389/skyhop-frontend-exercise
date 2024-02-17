@@ -1,0 +1,18 @@
+.tolerance-window-wrapper{
+    display: flex;
+    
+    font-family: "Raleway", sans-serif;
+    text-align: start;
+    align-items: center;
+    color: var(--primaryBlue); 
+    font-size: 0.9rem;
+   
+}
+.tolerance-window-wrapper span{
+margin-left: .5rem; ;
+}
+.tolerance-window-wrapper .clock-icon{
+font-size: .9rem;
+color: var(--primaryBlue); 
+margin: 0 .3rem ;
+}

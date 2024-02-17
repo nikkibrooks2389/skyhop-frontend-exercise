@@ -5,6 +5,9 @@ import CustomModal from './components/UI/Modal/CustomModal';
 import DocumentUpload from './components/DocumentUpload/DocumentUpload';
 import './App.css';
 
+
+
+
 function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -12,9 +15,16 @@ function App() {
   const handleCloseModal = () => setShowModal(false);
   return (
     <div className="App">
-      <Button type="primary" onClick={handleOpenModal}>Document Upload</Button>
-      <CustomModal open={showModal} handleClose={handleCloseModal}>
-        {/* Assuming DocumentUpload can be a child. Adjust as necessary. */}
+      <Button type="primary" onClick={handleOpenModal}>Document Upload </Button>
+      <CustomModal open={showModal} handleClose={handleCloseModal}
+        ariaLabelledby="document-upload-modal"
+        ariaDescribedby="modal-to-upload-documents"
+        closeButtonStyle={{
+          backgroundColor: '#1C3E6E',
+          padding: '.2rem',
+          borderRadius: "8px",
+          color: 'white',
+        }}>
         <DocumentUpload onClose={handleCloseModal} />
       </CustomModal>
     </div>

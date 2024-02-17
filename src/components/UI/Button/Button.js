@@ -12,7 +12,7 @@ import './Button.css'; // Make sure this path is correct
  *   ...props (Object): Additional props to pass to the button element.
  */
 const Button = ({ type = "primary", onClick, children, disabled, ...props }) => {
-    // Construct the class name to include both the base class and the type-specific class
+
     const className = `button ${type}-button`;
 
     return (

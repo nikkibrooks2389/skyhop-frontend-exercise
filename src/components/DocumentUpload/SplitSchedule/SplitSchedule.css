@@ -1,0 +1,5 @@
+.split-schedule-wrapper{
+display: flex;
+justify-content: start;
+align-items: start;
+}

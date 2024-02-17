@@ -1,0 +1,39 @@
+.toggle {
+    width: 50px;
+    height: 24px;
+    background-color: #b3cfff;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle.checked {
+    background-color: #1c3e6e;
+  }
+  
+  .track {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle.checked .track {
+    transform: translateX(26px);
+  }
+  
+  .thumb {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

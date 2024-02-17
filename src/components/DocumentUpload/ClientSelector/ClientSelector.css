@@ -1,0 +1,25 @@
+
+.client-option-select-icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .5rem;
+    color: var(--primaryBlue);
+    font-size: .9rem;
+}
+
+.client-option-select-icon-wrapper .clock-icon{
+    font-size: 1rem;
+    color: var(--primaryBlue); 
+    margin: 0 .5rem ;
+}
+
+.client-options{
+    display: flex;
+    flex-direction: row;
+    color: var(--primaryBlue);
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    font-size: .9rem;
+}

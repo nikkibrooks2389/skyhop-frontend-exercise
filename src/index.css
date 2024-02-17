@@ -1,6 +1,12 @@
+:root {
+  --primaryBlue: #1C3E6E;
+  --accentColor: #ff9e19
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "ABeeZee", sans-serif;
+  font-family: "Raleway", sans-serif;
+  
 }
 
