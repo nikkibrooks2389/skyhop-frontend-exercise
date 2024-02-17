@@ -24,6 +24,10 @@ function App() {
           padding: '.2rem',
           borderRadius: "8px",
           color: 'white',
+          '&:hover': {
+            backgroundColor: '#1C3E6E',
+            color: 'white',
+          },
         }}>
         <DocumentUpload onClose={handleCloseModal} />
       </CustomModal>

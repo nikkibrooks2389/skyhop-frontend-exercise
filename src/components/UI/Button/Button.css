@@ -20,6 +20,6 @@
   /* Outlined button specific styles */
   .outlined-button {
     background-color: transparent; /* Ensure background is transparent */
-    color: #ECE2C7;
-    border-color: #ECE2C7;
+    color:var(--accentColor); /* Accent color */
+    border-color: var(--accentColor);
   }

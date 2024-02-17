@@ -9,6 +9,7 @@ import ToleranceWindow from './ToleranceWindow/ToleranceWindow';
 import ClientSelector from './ClientSelector/ClientSelector';
 import SplitSchedule from './SplitSchedule/SplitSchedule';
 import LocationChecker from './LocationChecker/LocationChecker';
+import Button from '../UI/Button/Button';
 
 const DocumentUpload = () => {
     // State variables
@@ -104,11 +105,11 @@ const DocumentUpload = () => {
                         </SectionWrapper>
 
 
-                        <HorizontalLine />
+                        <HorizontalLine width="275px" />
                         <SectionWrapper header="Location Checking:">
                             <LocationChecker locationCheckerData={locationCheckerData} />
                         </SectionWrapper>
-                        <HorizontalLine />
+                        <HorizontalLine width="275px" />
                         <SectionWrapper header="Client:">
 
                             <ClientSelector
@@ -121,13 +122,21 @@ const DocumentUpload = () => {
                             />
 
                         </SectionWrapper>
-                        <HorizontalLine />
+
                     </div>
                 </div>
-                <div className="form-section-bottom">
-                    <button type="submit">Submit</button>
-                    <button type="button">Cancel</button>
-                </div>
+                <SectionWrapper style={{ marginTop: "2rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} header="Data in the import file is correct. Please press Continue to import">
+                    <div className="form-section-bottom">
+                        <div className="buttons-wrapper">
+                            <Button type="primary">
+                                Continue Import
+                            </Button>
+                            <Button type="outlined">
+                                Cancel
+                            </Button>
+                        </div>
+                    </div>
+                </SectionWrapper>
             </div>
         </div>
     );

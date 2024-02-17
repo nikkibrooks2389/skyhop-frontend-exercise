@@ -18,6 +18,7 @@
   
 }
 
+
 .form-section-top-left {
     flex: 60%; /* Takes up 60% of the space */
     display: flex;
@@ -30,9 +31,13 @@
 }
 
 .form-section-bottom {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Adjusts the buttons to each end or as per design */
-    padding-top: 20px; /* Adds some space above the buttons */
-    /* Additional styles for button alignment and spacing */
+
+    width: "100%";
+    display: "flex";
+    justify-content: "center";
+    align-items: center;
+    padding-top: "20px";
+}
+.form-section-bottom .buttons-wrapper {
+   padding-top: 1rem;
 }

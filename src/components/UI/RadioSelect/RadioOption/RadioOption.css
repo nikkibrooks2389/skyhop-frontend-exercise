@@ -5,6 +5,7 @@
     border-radius: 8px;
     font-size: .9rem;
     font-family: "Raleway", sans-serif;
+
 }
 
 .radio-option input[type="radio"] {
@@ -12,7 +13,7 @@
 }
 
 .radio-option input[type="radio"] + span {
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .radio-option input[type="radio"] + span::before {
@@ -21,7 +22,7 @@
     width: .8rem;
     height: .8rem;
     border-radius: 50%;
-    border: 2px solid var(--primaryBlue);
+    border: 1px solid var(--primaryBlue);
     margin-right: 8px; /* Adjusted margin-right for space between dot and label */
 }
 

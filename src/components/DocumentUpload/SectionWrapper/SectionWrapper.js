@@ -10,9 +10,9 @@ import "./SectionWrapper.css";
  *   - children (ReactNode): Content to be wrapped.
  *   - header (String): Header for the section.
  */
-const SectionWrapper = ({ children, header }) => {
+const SectionWrapper = ({ children, header, style }) => {
     return (
-        <section className="document-upload-section-wrapper">
+        <section className="document-upload-section-wrapper" style={style}>
             <h2>{header}</h2>
             {children}
         </section>
