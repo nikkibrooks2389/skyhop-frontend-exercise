@@ -16,13 +16,26 @@ import './RadioOption.css';
 
  */
 
-
 const RadioOption = ({ option, selected, onClick }) => {
+    // Generate a unique ID for each input to link it with its label
+    const inputId = `radio-option-${option}`;
+
     return (
-        <label className={`radio-option ${selected ? 'selected' : ''}`} onClick={() => onClick(option)}>
-            <input type="radio" value={option} checked={selected} onChange={() => { }} />
-            <span>{option}</span>
-        </label>
+        <li className="radio-option">
+            {/* Apply the radio-input class to visually hide the input */}
+            <input
+                id={inputId}
+                type="radio"
+                value={option}
+                checked={selected}
+                onChange={() => { }} // Add an empty onChange to satisfy React's controlled component requirement
+                className="radio-input"
+            />
+            {/* Use htmlFor to link the label to the input */}
+            <label htmlFor={inputId} className={`radio-label ${selected ? 'selected' : ''}`} onClick={() => onClick(option)}>
+                {option}
+            </label>
+        </li>
     );
 };
 

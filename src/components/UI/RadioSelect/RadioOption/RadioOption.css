@@ -1,35 +1,50 @@
-.radio-option {
-    cursor: pointer;
-    margin-bottom: 8px;
-    color: var(--primaryBlue);
-    border-radius: 8px;
-    font-size: .9rem;
-    font-family: "Raleway", sans-serif;
+.radio-option{
+    list-style-type: none;
+}
+ 
+.radio-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+.radio-option label {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-}
-
-.radio-option input[type="radio"] {
-    display: none;
-}
-
-.radio-option input[type="radio"] + span {
-    margin-right: 10px;
     
-}
+  }
 
-.radio-option input[type="radio"] + span::before {
+  .radio-option  label::before {
     content: '';
-    display: inline-block;
-    width: .8rem;
-    height: .8rem;
+    display: block;
+    height: .9rem;
+    width: .9rem;
+    border: solid 1px #ccc;
     border-radius: 50%;
-    border: 1px solid var(--primaryBlue);
-    margin-right: 8px; /* Adjusted margin-right for space between dot and label */
+    margin-right: 0.5em;
+    transition: border ease-in 150ms, box-shadow ease-in 150ms;
+  }
+
+  .radio-option input[type="radio"]:checked + label {
+    color: black;
+  }
+
+  .radio-option input[type="radio"]:checked + label::before {
+    background: radial-gradient(0.70rem circle at center, currentColor 50%, transparent 55%);
+ 
+    border-color: var(--primaryBlue)
+  }
+
+  .radio-option input[type="radio"]:checked + label,
+input[type="radio"]:focus + label {
+  color: var(--primaryBlue)
 }
 
-.radio-option.selected input[type="radio"] + span::before {
-    background-color: var(--primaryBlue);
-
-    
+.radio-option input[type="radio"]:focus + label::before {
+ 
+  border-color: currentColor;
 }

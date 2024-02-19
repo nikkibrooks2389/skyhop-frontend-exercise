@@ -31,6 +31,7 @@ const defaultStyle = {
   boxShadow: '0 8px 10px -5px rgba(0, 0, 0, 0.2)',
   p: 4,
   textAlign: 'center',
+
 };
 
 function CustomModal({
@@ -58,6 +59,7 @@ function CustomModal({
       BackdropProps={{
         style: backdropStyle,
       }}
+
     >
       <Box sx={style}>
         {showCloseButton && (
@@ -74,6 +76,7 @@ function CustomModal({
 
           >
             <CloseIcon />
+
           </IconButton>
         )}
         {children}

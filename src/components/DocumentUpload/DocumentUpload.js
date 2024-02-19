@@ -38,6 +38,7 @@ const DocumentUpload = () => {
         { key: "Testing Center 4", values: ["client7", "client8"] },
     ];
 
+
     // Event handlers
     const handleChange = (value) => {
         setSelectedValue(value);
@@ -125,13 +126,14 @@ const DocumentUpload = () => {
 
                     </div>
                 </div>
-                <SectionWrapper style={{ marginTop: "2rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} header="Data in the import file is correct. Please press Continue to import">
+                <SectionWrapper style={{ marginTop: "2rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} header="Data in the import file is correct. Please press Continue to import.">
                     <div className="form-section-bottom">
                         <div className="buttons-wrapper">
-                            <Button type="primary">
+
+                            <Button type="primary" style={{ margin: ".5rem" }}>
                                 Continue Import
                             </Button>
-                            <Button type="outlined">
+                            <Button type="outlined" style={{ margin: ".5rem" }}>
                                 Cancel
                             </Button>
                         </div>

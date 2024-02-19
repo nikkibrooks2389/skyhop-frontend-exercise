@@ -1,5 +1,11 @@
 .radio-select {
   display: flex;
   align-items: flex-start;
+  flex-direction: row;
   font-family: "Raleway", sans-serif;
 }
+
+.radio-select span {
+    margin-right: 0.5rem;
+
+  }

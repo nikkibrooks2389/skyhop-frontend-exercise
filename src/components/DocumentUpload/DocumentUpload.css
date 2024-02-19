@@ -5,34 +5,33 @@
     margin-bottom: 0;
 }
 .document-upload{
-    overflow-y: auto; /* Add overflow property to enable vertical scrolling */
-    max-height: 100%; 
+  
+    height: 100%; 
 
 }
 .document-upload-form {
- 
-    /* This container now simply serves as a wrapper for the form */
-    padding:2rem;
+    padding:1.5rem 2rem ;
+    overflow-y: auto;
+    height:calc(100% - 9rem);
 }
 
 .form-content-top {
     display: flex;
-    width: 100%;
-    flex-direction: row; /* Ensures children are laid out in a row */
-    gap: 3rem; /* Optional: Adds some space between the sections */
+    max-width: 100%;
+    flex-direction: row; 
+    gap: 3rem; 
   
 }
 
 
 .form-section-top-left {
-    flex: 60%; /* Takes up 60% of the space */
+    flex: 60%;
     display: flex;
-    flex-direction: column; /* Ensures children are laid out in a column */
-   
+    flex-direction: column; 
 }
 
 .form-section-top-right {
-    flex: 40%; /* Takes up 40% of the space */
+    flex: 40%;
 }
 
 .form-section-bottom {
@@ -46,3 +45,18 @@
 .form-section-bottom .buttons-wrapper {
    padding-top: 1rem;
 }
+
+@media only screen and (max-width: 960px) {
+    .form-content-top {
+      flex-direction: column;
+      
+    }
+  
+    .form-section-top-left,
+    .form-section-top-right {
+      flex: none; 
+      width: 100%; 
+      justify-content: center;
+      
+    }
+  }

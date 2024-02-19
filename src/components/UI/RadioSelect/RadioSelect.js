@@ -33,12 +33,14 @@ const RadioSelect = ({ options = [], onChange, selectedOption }) => {
     return (
         <div className="radio-select">
             {options && options.map((option, index) => (
-                <RadioOption
-                    key={index}
-                    option={option}
-                    selected={option === selected}
-                    onClick={handleClick}
-                />
+                <span key={index}>
+                    <RadioOption
+                        key={index}
+                        option={option}
+                        selected={option === selected}
+                        onClick={handleClick}
+                    />
+                </span>
             ))}
         </div>
     );

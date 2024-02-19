@@ -47,7 +47,7 @@ const ClientSelector = ({ label, options = [], options2 = [], radioValue, select
                             options={option.values}
                             value={selectValues[index].value} // Access value based on index
                             onChange={(selectedValue) => handleSelectInputChange(selectedValue, index)}
-                            style={{ width: "150px" }}
+                            style={{ width: "125px" }}
                         />
                         <FontAwesomeIcon className="clock-icon" icon={faClock} />
                     </div>
