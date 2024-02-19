@@ -37,7 +37,7 @@ const CustomSelect = ({ label, options, placeholder, value, onChange, style }) =
                                 className="custom-option"
                                 onClick={() => handleOptionClick(option)}
                             >
-                                {option} {/* Display option as both value and label */}
+                                {option}
                             </div>
                         ))}
                     </div>

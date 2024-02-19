@@ -6,7 +6,7 @@
     margin: 0 5px;
     font-size: .9rem;
     border-radius: 8px;
-    border: 1px solid transparent; /* Default border */
+    border: 1px solid transparent;
     width:240px
   }
   
@@ -19,7 +19,7 @@
   
   /* Outlined button specific styles */
   .outlined-button {
-    background-color: transparent; /* Ensure background is transparent */
-    color:var(--accentColor); /* Accent color */
+    background-color: transparent;
+    color:var(--accentColor);
     border-color: var(--accentColor);
   }

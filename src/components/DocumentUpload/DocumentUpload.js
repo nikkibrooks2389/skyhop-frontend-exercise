@@ -10,8 +10,9 @@ import ClientSelector from './ClientSelector/ClientSelector';
 import SplitSchedule from './SplitSchedule/SplitSchedule';
 import LocationChecker from './LocationChecker/LocationChecker';
 import Button from '../UI/Button/Button';
+import { Alert } from '@mui/material';
 
-const DocumentUpload = () => {
+const DocumentUpload = ({ onClose }) => {
     // State variables
     const [selectedValue, setSelectedValue] = useState('');
     const [fileDetails, setFileDetails] = useState(null); // State for file details
@@ -68,6 +69,15 @@ const DocumentUpload = () => {
         });
     };
 
+    const handleContinueImport = () => {
+        // Close the modal first
+        onClose();
+
+        // Then show the alert after a very short delay
+        setTimeout(() => {
+            alert("Imported Successfully");
+        }, 100); // 100 milliseconds delay
+    }
     return (
         <div className="document-upload">
             <span></span>
@@ -130,10 +140,10 @@ const DocumentUpload = () => {
                     <div className="form-section-bottom">
                         <div className="buttons-wrapper">
 
-                            <Button type="primary" style={{ margin: ".5rem" }}>
+                            <Button type="primary" style={{ margin: ".5rem" }} onClick={handleContinueImport}>
                                 Continue Import
                             </Button>
-                            <Button type="outlined" style={{ margin: ".5rem" }}>
+                            <Button type="outlined" style={{ margin: ".5rem" }} onClick={onClose}>
                                 Cancel
                             </Button>
                         </div>

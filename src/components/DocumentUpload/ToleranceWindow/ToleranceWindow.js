@@ -18,7 +18,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
  */
 
 const ToleranceWindow = ({ isOpen, onToggle }) => {
-    // Common JSX for both cases
+
     const commonContent = (
         <>
             <FontAwesomeIcon className="clock-icon" icon={faClock} />

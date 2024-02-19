@@ -76,7 +76,6 @@ function CustomModal({
 
           >
             <CloseIcon />
-
           </IconButton>
         )}
         {children}
