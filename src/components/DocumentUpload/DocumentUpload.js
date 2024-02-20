@@ -13,7 +13,7 @@ import Button from '../UI/Button/Button';
 
 const DocumentUpload = ({ onClose }) => {
     // State variables
-    const [selectedValue, setSelectedValue] = useState('');
+    const [selectedImportNameValue, setSelectedImportNameValue] = useState('');
     const [fileDetails, setFileDetails] = useState(null); // State for file details
     const [elapseData, setElapseData] = useState("No Elapsed Dates!"); // State for elapse data
     const [isOpen, setIsOpen] = useState(false); // State for tolerance window
@@ -40,8 +40,9 @@ const DocumentUpload = ({ onClose }) => {
 
 
     // Event handlers
-    const handleChange = (value) => {
-        setSelectedValue(value);
+    const handleSelectedImportNameChange = (value) => {
+        console.log(value)
+        setSelectedImportNameValue(value);
     };
 
     const handleFileUpload = (details) => {
@@ -89,7 +90,7 @@ const DocumentUpload = ({ onClose }) => {
             <div className="document-upload-form">
                 <div className="form-content-top">
                     <div className="form-section-top-left">
-                        <ImportNameSelector selectedImportName={selectedValue} onSelectImportName={handleChange} options={options} />
+                        <ImportNameSelector value={selectedImportNameValue} onSelectImportName={handleSelectedImportNameChange} options={options} />
 
                         <HorizontalLine width="275px" />
                         <SectionWrapper header="Select a manifest that you'd like to import">
