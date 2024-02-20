@@ -6,3 +6,23 @@
     height: 36px;
   
   }
+
+  /* Assuming .custom-modal is the class for your modal */
+.document-upload-modal {
+    width: 900px; /* Default width for large screens */
+    /* Other styling properties */
+  }
+  
+  /* Media query for medium screens */
+  @media (max-width: 768px) { /* Adjust 768px as needed based on your theme's breakpoints */
+    .document-upload-modal {
+      width: 550px; /* Adjusted width for medium screens */
+    }
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 480px) { /* Adjust 480px as needed based on your theme's breakpoints */
+    .document-upload-modal {
+      width: 85vw; /* Full width for small screens */
+    }
+  }

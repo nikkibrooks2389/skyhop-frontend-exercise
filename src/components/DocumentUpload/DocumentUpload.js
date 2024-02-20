@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './DocumentUpload.css';
-import CustomSelect from '../UI/CustomSelect/CustomSelect';
 import HorizontalLine from './HorizontalLine/HorizontalLine';
 import FileUploader from "./FileUploader/FileUploader";
 import SectionWrapper from './SectionWrapper/SectionWrapper';
@@ -9,8 +8,8 @@ import ToleranceWindow from './ToleranceWindow/ToleranceWindow';
 import ClientSelector from './ClientSelector/ClientSelector';
 import SplitSchedule from './SplitSchedule/SplitSchedule';
 import LocationChecker from './LocationChecker/LocationChecker';
+import ImportNameSelector from './ImportNameSelector/ImportNameSelector';
 import Button from '../UI/Button/Button';
-import { Alert } from '@mui/material';
 
 const DocumentUpload = ({ onClose }) => {
     // State variables
@@ -90,12 +89,8 @@ const DocumentUpload = ({ onClose }) => {
             <div className="document-upload-form">
                 <div className="form-content-top">
                     <div className="form-section-top-left">
-                        <CustomSelect
-                            placeholder="Select Import Name:"
-                            value={selectedValue}
-                            onChange={handleChange}
-                            options={options}
-                        />
+                        <ImportNameSelector selectedImportName={selectedValue} onSelectImportName={handleChange} options={options} />
+
                         <HorizontalLine width="275px" />
                         <SectionWrapper header="Select a manifest that you'd like to import">
                             <FileUploader onFileUpload={handleFileUpload} />
